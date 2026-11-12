@@ -1,0 +1,29 @@
+name: Validacion IaC en AWS
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  terraform-checks:
+    name: Formato y Validacion Sintactica
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Instalar Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.9.0
+
+      - name: Verificar formato (terraform fmt)
+        run: terraform fmt -check -recursive
+
+      - name: Inicializar sin credenciales
+        run: terraform init -backend=false
+
+      - name: Validar sintaxis y tipos (terraform validate)
+        run: terraform validate
