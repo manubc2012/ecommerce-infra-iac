@@ -13,17 +13,6 @@ provider "aws" {
   region = var.aws_region
 }
 
-# Obtener la última AMI oficial de Amazon Linux 2023 (Version Pinning por familia)
-data "aws_ami" "al2023" {
-  most_recent = true
-  owners      = ["amazon"]
-
-  filter {
-    name   = "name"
-    values = ["al2023-ami-2023*-x86_64"]
-  }
-}
-
 # 1. Red Privada Virtual (VPC) aislada por ambiente
 resource "aws_vpc" "ecommerce_vpc" {
   cidr_block           = "10.0.0.0/16"
@@ -115,7 +104,7 @@ resource "aws_security_group" "web_sg" {
 # 3. Plantilla de Cómputo Estandarizada (Launch Template)
 resource "aws_launch_template" "webapp_lt" {
   name_prefix   = "ecom-${var.env_name}-lt-"
-  image_id      = data.aws_ami.al2023.id
+  image_id      = var.ami_id
   instance_type = var.instance_type
 
   vpc_security_group_ids = [aws_security_group.web_sg.id]

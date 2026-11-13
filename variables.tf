@@ -37,3 +37,8 @@ variable "asg_max_instances" {
   type        = number
   default     = 6
 }
+
+variable "ami_id" {
+  description = "AMI fija de Amazon Linux 2023. Cambia solo mediante RFC."
+  type        = string
+}
