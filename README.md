@@ -22,7 +22,13 @@ ecommerce-infra-iac/
 ├── .github/
 │   └── workflows/
 │       └── iac-validation.yml      # Pipeline CI: terraform fmt, terraform validate y Checkov (SAST)
-├── diagrams/                       # Diagramas de arquitectura, ciclo de vida y flujo RFC (.png y .drawio)
+├── diagrams/                                       # Diagramas visuales (.png) y fuentes editables (.drawio)
+│   ├── arquitectura-objetivo-poc.drawio
+│   ├── arquitectura-objetivo-poc.png
+│   ├── ciclo-vida-solucion.drawio
+│   ├── ciclo-vida-solucion.png
+│   ├── flujo-cambio-controlado.drawio
+│   └── flujo-cambio-controlado.png
 ├── docs/                           # Documentación operativa y métricas SLI/SLO
 ├── environments/                   # Configuración aislada por ambiente
 │   ├── dev/
@@ -67,7 +73,7 @@ Cada `push` o `Pull Request` hacia `main` dispara automáticamente el flujo **Va
 
 Toda modificación sigue el flujo controlado **RFC → Rama aislada → Pull Request → Pipeline CI → `terraform plan` → `terraform apply` → Validación → Rollback**:
 
-![Flujo del cambio controlado](diagrams/flujo-cambio-rfc.png)
+![Flujo del cambio controlado](diagrams/flujo-cambio-controlado.png)
 
 ### Historial de RFCs Ejecutados
 
@@ -88,7 +94,7 @@ Toda modificación sigue el flujo controlado **RFC → Rama aislada → Pull Req
 
 El ciclo de vida de la plataforma articula los requisitos no funcionales (`RNF-01` a `RNF-07`), las decisiones de arquitectura, la automatización declarativa y la mejora continua basada en evidencia operativa:
 
-![Ciclo de vida de la solución](diagrams/ciclo-vida-solucion.png)
+![Ciclo de vida integrado de la solución](diagrams/ciclo-vida-solucion.png)
 
 * **Observabilidad Centralizada y Métricas SLI/SLO/XLA:** Estrategia de monitoreo híbrido con **Zabbix** (AWS + ERP *on-premises*), mapeo de Señales Doradas SRE y prevención del *Efecto Sandía* documentados en [`docs/observabilidad-zabbix.md`](docs/observabilidad-zabbix.md).
 
