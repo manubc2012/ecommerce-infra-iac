@@ -27,8 +27,8 @@ variable "asg_desired_instances" {
   default     = 2
 
   validation {
-    condition     = var.asg_desired_instances >= 1 && var.asg_desired_instances <= 8
-    error_message = "Política FinOps: el clúster no puede superar el techo de 8 instancias."
+    condition     = var.asg_desired_instances >= 1 && var.asg_desired_instances <= 6
+    error_message = "Política FinOps: el clúster no puede superar el techo de 6 instancias (Entregables 1 y 2)."
   }
 }
 
