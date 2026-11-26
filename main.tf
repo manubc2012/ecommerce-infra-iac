@@ -77,7 +77,7 @@ resource "aws_route_table_association" "az2_assoc" {
 # 2. Seguridad Perimetral (Security Group)
 resource "aws_security_group" "web_sg" {
   name        = "ecom-${var.env_name}-web-sg"
-  description = "Permite trafico HTTP controlado hacia el cluster e-commerce"
+  description = "Permite trafico HTTP controlado y recoleccion de metricas Zabbix Agent"
   vpc_id      = aws_vpc.ecommerce_vpc.id
 
   ingress {
@@ -86,6 +86,14 @@ resource "aws_security_group" "web_sg" {
     to_port     = 80
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    description = "Zabbix Agent (TCP 10050) desde red privada/VPN"
+    from_port   = 10050
+    to_port     = 10050
+    protocol    = "tcp"
+    cidr_blocks = ["10.0.0.0/16"]
   }
 
   egress {

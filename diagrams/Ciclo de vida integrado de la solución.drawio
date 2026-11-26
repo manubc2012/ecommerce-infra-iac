@@ -1,0 +1,115 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="Aw4Qoj-_ROvzBxDZkjzH">
+    <mxGraphModel dx="3215" dy="1583" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" mermaidData="{&#xa;  &quot;data&quot;: &quot;flowchart LR\n    S[\&quot;Servicio&lt;br/&gt;RNF-01 a RNF-07\&quot;] --&gt; A[\&quot;Arquitectura&lt;br/&gt;Monolito PaaS en AWS\&quot;]\n    A --&gt; AD[\&quot;Adquisición&lt;br/&gt;AWS y Terraform\&quot;]\n    AD --&gt; I[\&quot;Implementación&lt;br/&gt;IaC, 3 ambientes y Checkov\&quot;]\n    I --&gt; O[\&quot;Operación&lt;br/&gt;Zabbix (SLI/SLO/XLA)&lt;br/&gt;y Efecto Sandía\&quot;]\n    O --&gt; C[\&quot;Continuidad&lt;br/&gt;RPO/RTO, drift y rollback\&quot;]\n    C --&gt; M[\&quot;Mejora&lt;br/&gt;Latencia ERP y ajuste FinOps\&quot;]\n\n    M -.-&gt;|\&quot;nueva evidencia\&quot;| S\n\n    classDef etapa fill:#e8f1fa,stroke:#2b6cb0,stroke-width:1.5px,color:#1a365d;\n    class S,A,AD,I,O,C,M etapa;&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="p8dT5eK1MLkWWtosao_I-163">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=10;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Servicio&#xa;RNF-01 a RNF-07" mermaidId="n:S" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1.5;fillColor=#e8f1fa;strokeColor=#2b6cb0;fontColor=#1a365d;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Servicio&#xa;RNF-01 a RNF-07" id="p8dT5eK1MLkWWtosao_I-164">
+          <mxCell parent="p8dT5eK1MLkWWtosao_I-163" style="html=1;whiteSpace=wrap;strokeWidth=1.5;fillColor=#e8f1fa;strokeColor=#2b6cb0;fontColor=#1a365d;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="179" x="30" y="81" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Arquitectura&#xa;Monolito PaaS en AWS" mermaidId="n:A" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1.5;fillColor=#e8f1fa;strokeColor=#2b6cb0;fontColor=#1a365d;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Arquitectura&#xa;Monolito PaaS en AWS" id="p8dT5eK1MLkWWtosao_I-165">
+          <mxCell parent="p8dT5eK1MLkWWtosao_I-163" style="html=1;whiteSpace=wrap;strokeWidth=1.5;fillColor=#e8f1fa;strokeColor=#2b6cb0;fontColor=#1a365d;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="215" x="259" y="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Adquisición&#xa;AWS y Terraform" mermaidId="n:AD" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1.5;fillColor=#e8f1fa;strokeColor=#2b6cb0;fontColor=#1a365d;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Adquisición&#xa;AWS y Terraform" id="p8dT5eK1MLkWWtosao_I-166">
+          <mxCell parent="p8dT5eK1MLkWWtosao_I-163" style="html=1;whiteSpace=wrap;strokeWidth=1.5;fillColor=#e8f1fa;strokeColor=#2b6cb0;fontColor=#1a365d;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="177" x="524" y="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Implementación&#xa;IaC, 3 ambientes y Checkov" mermaidId="n:I" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1.5;fillColor=#e8f1fa;strokeColor=#2b6cb0;fontColor=#1a365d;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Implementación&#xa;IaC, 3 ambientes y Checkov" id="p8dT5eK1MLkWWtosao_I-167">
+          <mxCell parent="p8dT5eK1MLkWWtosao_I-163" style="html=1;whiteSpace=wrap;strokeWidth=1.5;fillColor=#e8f1fa;strokeColor=#2b6cb0;fontColor=#1a365d;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="258" x="751" y="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Operación&#xa;Zabbix (SLI/SLO/XLA)&#xa;y Efecto Sandía" mermaidId="n:O" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1.5;fillColor=#e8f1fa;strokeColor=#2b6cb0;fontColor=#1a365d;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Operación&#xa;Zabbix (SLI/SLO/XLA)&#xa;y Efecto Sandía" id="p8dT5eK1MLkWWtosao_I-168">
+          <mxCell parent="p8dT5eK1MLkWWtosao_I-163" style="html=1;whiteSpace=wrap;strokeWidth=1.5;fillColor=#e8f1fa;strokeColor=#2b6cb0;fontColor=#1a365d;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="93" width="214" x="1059" y="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Continuidad&#xa;RPO/RTO, drift y rollback" mermaidId="n:C" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1.5;fillColor=#e8f1fa;strokeColor=#2b6cb0;fontColor=#1a365d;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Continuidad&#xa;RPO/RTO, drift y rollback" id="p8dT5eK1MLkWWtosao_I-169">
+          <mxCell parent="p8dT5eK1MLkWWtosao_I-163" style="html=1;whiteSpace=wrap;strokeWidth=1.5;fillColor=#e8f1fa;strokeColor=#2b6cb0;fontColor=#1a365d;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="243" x="1323" y="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Mejora&#xa;Latencia ERP y ajuste FinOps" mermaidId="n:M" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1.5;fillColor=#e8f1fa;strokeColor=#2b6cb0;fontColor=#1a365d;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Mejora&#xa;Latencia ERP y ajuste FinOps" id="p8dT5eK1MLkWWtosao_I-170">
+          <mxCell parent="p8dT5eK1MLkWWtosao_I-163" style="html=1;whiteSpace=wrap;strokeWidth=1.5;fillColor=#e8f1fa;strokeColor=#2b6cb0;fontColor=#1a365d;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="267" x="1616" y="81" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:S-&gt;A#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.05;entryX=0;entryY=0.51;" mermaidBaseValue="" id="p8dT5eK1MLkWWtosao_I-171">
+          <mxCell edge="1" parent="p8dT5eK1MLkWWtosao_I-163" source="p8dT5eK1MLkWWtosao_I-164" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.05;entryX=0;entryY=0.51;rounded=0;fontSize=12;" target="p8dT5eK1MLkWWtosao_I-165">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="234" y="77" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:A-&gt;AD#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.51;entryX=0;entryY=0.51;" mermaidBaseValue="" id="p8dT5eK1MLkWWtosao_I-172">
+          <mxCell edge="1" parent="p8dT5eK1MLkWWtosao_I-163" source="p8dT5eK1MLkWWtosao_I-165" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.51;entryX=0;entryY=0.51;rounded=0;fontSize=12;" target="p8dT5eK1MLkWWtosao_I-166">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:AD-&gt;I#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.51;entryX=0;entryY=0.51;" mermaidBaseValue="" id="p8dT5eK1MLkWWtosao_I-173">
+          <mxCell edge="1" parent="p8dT5eK1MLkWWtosao_I-163" source="p8dT5eK1MLkWWtosao_I-166" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.51;entryX=0;entryY=0.51;rounded=0;fontSize=12;" target="p8dT5eK1MLkWWtosao_I-167">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:I-&gt;O#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.51;entryX=0;entryY=0.51;" mermaidBaseValue="" id="p8dT5eK1MLkWWtosao_I-174">
+          <mxCell edge="1" parent="p8dT5eK1MLkWWtosao_I-163" source="p8dT5eK1MLkWWtosao_I-167" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.51;entryX=0;entryY=0.51;rounded=0;fontSize=12;" target="p8dT5eK1MLkWWtosao_I-168">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:O-&gt;C#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.51;entryX=0;entryY=0.51;" mermaidBaseValue="" id="p8dT5eK1MLkWWtosao_I-175">
+          <mxCell edge="1" parent="p8dT5eK1MLkWWtosao_I-163" source="p8dT5eK1MLkWWtosao_I-168" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.51;entryX=0;entryY=0.51;rounded=0;fontSize=12;" target="p8dT5eK1MLkWWtosao_I-169">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:C-&gt;M#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.51;entryX=0;entryY=0.03;" mermaidBaseValue="" id="p8dT5eK1MLkWWtosao_I-176">
+          <mxCell edge="1" parent="p8dT5eK1MLkWWtosao_I-163" source="p8dT5eK1MLkWWtosao_I-169" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.51;entryX=0;entryY=0.03;rounded=0;fontSize=12;" target="p8dT5eK1MLkWWtosao_I-170">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1591" y="77" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="nueva evidencia" mermaidId="e:M-&gt;S#0" mermaidBaseStyle="curved=1;dashed=1;dashPattern=2 3;fixDash=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.97;entryX=1;entryY=0.93;" mermaidBaseValue="nueva evidencia" id="p8dT5eK1MLkWWtosao_I-177">
+          <mxCell edge="1" parent="p8dT5eK1MLkWWtosao_I-163" source="p8dT5eK1MLkWWtosao_I-170" style="curved=1;dashed=1;dashPattern=2 3;fixDash=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.97;entryX=1;entryY=0.93;rounded=0;" target="p8dT5eK1MLkWWtosao_I-164">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1591" y="158" />
+                <mxPoint x="1445" y="158" />
+                <mxPoint x="1298" y="158" />
+                <mxPoint x="1166" y="158" />
+                <mxPoint x="1034" y="158" />
+                <mxPoint x="880" y="158" />
+                <mxPoint x="726" y="158" />
+                <mxPoint x="613" y="158" />
+                <mxPoint x="499" y="158" />
+                <mxPoint x="367" y="158" />
+                <mxPoint x="234" y="158" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

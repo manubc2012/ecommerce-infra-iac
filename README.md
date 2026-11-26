@@ -8,8 +8,8 @@ Repositorio oficial de demostración técnica (PoC) y evidencias de gestión con
 
 Este repositorio implementa mediante **Terraform** y **GitHub Actions** el núcleo declarativo de red y cómputo elástico definido para la plataforma de comercio electrónico híbrida en **Amazon Web Services (AWS)**:
 
-* **Diseño Objetivo (Producción — 5 meses):** Monolito Híbrido/BFF sobre AWS Elastic Beanstalk (`t4g.medium`, 2 a 8 instancias Multi-AZ), ALB con TLS 1.3, AWS WAF, Amazon RDS PostgreSQL Multi-AZ (`db.m6g.large`), Amazon ElastiCache for Redis (`cache.t4g.small`), Amazon S3 y túnel AWS Site-to-Site VPN IPsec (AES-256) hacia el ERP *on-premises*.
-* **Alcance de la Prueba de Concepto (PoC — AWS Academy `us-east-1`):** Despliegue autocontenido y reproducible de la capa de red privada (`VPC 10.0.0.0/16` en `us-east-1a` y `us-east-1b`), seguridad perimetral (`Security Group`), plantilla de lanzamiento (`Launch Template` con Amazon Linux 2023 y Apache) y grupo de autoescalado (`Auto Scaling Group`) con instancias `t3.micro` bajo criterios FinOps.
+- **Diseño Objetivo (Producción — 5 meses):** Monolito Híbrido/BFF sobre AWS Elastic Beanstalk (`t4g.medium`, 2 a 8 instancias Multi-AZ), ALB con TLS 1.3, AWS WAF, Amazon RDS PostgreSQL Multi-AZ (`db.m6g.large`), Amazon ElastiCache for Redis (`cache.t4g.small`), Amazon S3, túnel AWS Site-to-Site VPN IPsec (AES-256) hacia el ERP *on-premises* y **observabilidad centralizada mediante Zabbix** (cobertura híbrida AWS + ERP *on-premises* y monitoreo sintético XLA para prevenir el Efecto Sandía).
+- **Alcance de la Prueba de Concepto (PoC — AWS Academy `us-east-1`):** Despliegue autocontenido y reproducible de la capa de red privada (`VPC 10.0.0.0/16` en `us-east-1a` y `us-east-1b`), seguridad perimetral (`Security Group` con tráfico HTTP y puerto TCP `10050` preparado para *Zabbix Agent*), plantilla de lanzamiento (`Launch Template` con Amazon Linux 2023 y Apache) y grupo de autoescalado (`Auto Scaling Group`) con instancias `t3.micro` bajo criterios FinOps.
 
 ![Arquitectura Objetivo vs. PoC](diagrams/arquitectura-objetivo-poc.png)
 
@@ -80,6 +80,7 @@ Toda modificación sigue el flujo controlado **RFC → Rama aislada → Pull Req
 | **RFC-2026-016** | `chg/RFC-2026-016-checkov-pipeline` | Integración de análisis estático de seguridad con Checkov en GitHub Actions. | Auditoría SAST automatizada en cada PR. |
 | **RFC-2026-017** | `docs/RFC-2026-017-documentacion-y-diagramas` | Consolidación de `README.md`, documentación operativa y diagramas en `diagrams/`. | Trazabilidad documental completa en repositorio. |
 
+
 ---
 
 ## 6. Ciclo de Vida Integrado y Documentación Operativa
@@ -88,7 +89,7 @@ El ciclo de vida de la plataforma articula los requisitos no funcionales (`RNF-0
 
 ![Ciclo de vida de la solución](diagrams/ciclo-vida-solucion.png)
 
-* **Indicadores de Nivel de Servicio (SLI/SLO):** Documentados en [`docs/slo-sli.md`](docs/slo-sli.md).
+* **Observabilidad Centralizada y Métricas SLI/SLO/XLA:** Estrategia de monitoreo híbrido con **Zabbix** (AWS + ERP *on-premises*), mapeo de Señales Doradas SRE y prevención del *Efecto Sandía* documentados en [`docs/observabilidad-zabbix.md`](docs/observabilidad-zabbix.md).
 
 ---
 
