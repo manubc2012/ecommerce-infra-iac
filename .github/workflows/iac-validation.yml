@@ -27,3 +27,17 @@ jobs:
 
       - name: Validar sintaxis y tipos (terraform validate)
         run: terraform validate
+
+  checkov:
+    name: Analisis de seguridad (Checkov)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Ejecutar Checkov
+        uses: bridgecrewio/checkov-action@v12
+        with:
+          directory: .
+          framework: terraform
+          soft_fail: true
