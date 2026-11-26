@@ -79,6 +79,7 @@ Toda modificación sigue el flujo controlado **RFC → Rama aislada → Pull Req
 | **RFC-2026-015** | PR #2 | Fijación explícita de `ami_id` en `variables.tf` para eliminar deriva detectada en el plan. | Eliminación de actualización no solicitada de plantilla. |
 | **RFC-2026-016** | `chg/RFC-2026-016-checkov-pipeline` | Integración de análisis estático de seguridad con Checkov en GitHub Actions. | Auditoría SAST automatizada en cada PR. |
 | **RFC-2026-017** | `docs/RFC-2026-017-documentacion-y-diagramas` | Consolidación de `README.md`, documentación operativa y diagramas en `diagrams/`. | Trazabilidad documental completa en repositorio. |
+| **RFC-2026-018** | `feat/RFC-2026-018-observabilidad-zabbix` | Incorporación de Zabbix como plataforma centralizada de monitoreo, regla TCP `10050` en SG y actualización de diagramas. | Observabilidad híbrida (AWS + ERP) y prevención de Efecto Sandía documentadas. |
 
 
 ---
